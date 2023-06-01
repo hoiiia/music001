@@ -31,14 +31,14 @@ export default{
     name:"musiclist",
     setup(){
         const musicls = reactive({ musics:[] });
-        function changeValue(num){
-            var res = 0;
+        function changeValue(num){//格式化播放量 55555555
+            var res=0;
             if(num>=100000000){
                 res = num/100000000;
-                res = res.toFixed(2) + "亿";   //toFixed(2)截取小数点后两位
-            }else if(num >= 10000){
+                res = res.toFixed(2)+"亿"; //toFixed(2)截取小数点后两位
+            }else if(num>=10000){
                 res = num/10000;
-                res = res.toFixed(2) + "万";
+                res = res.toFixed(2)+"万";
             }else{
                 res = num;
             }
@@ -55,14 +55,14 @@ export default{
                 spaceBetween:10//每个滑块之间的间距
             })
         })
-        return { musicls,changeValue }
+        return {musicls,changeValue}
     }
 }
 </script>
 
 <style lang="less" scoped>
 .musicList{
-    width: 7.6rem;
+    width: 7.5rem;
     padding: 0 0.4rem;
     .musicList-top{
         display: flex;

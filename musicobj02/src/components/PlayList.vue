@@ -2,7 +2,7 @@
     <div class="playlist">
         <div class="playlist-top">
             <div class="left">
-                <svg class="icon" arica-hidden="true">
+                <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-bofang3"></use>
                 </svg>
                 <div class="text">
@@ -10,10 +10,8 @@
                     <div class="num">(共10首)</div>
                 </div>
             </div>
-            <div class="right">
-                <div class="btn">
-                    +收藏(100)
-                </div>
+            <div class="btn">
+                +收藏(100)
             </div>
         </div>
         <div class="list">
@@ -28,10 +26,10 @@
                     </div>
                 </div>
                 <div class="right">
-                    <svg class="icon" arica-hidden="true">
+                    <svg class="icon" aria-hidden="true" @click="setPlayIndex(index)">
                         <use xlink:href="#icon-bofang2"></use>
                     </svg>
-                    <svg class="icon" arica-hidden="true">
+                    <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-liebiao"></use>
                     </svg>
                 </div>
@@ -39,15 +37,17 @@
         </div>
     </div>
 </template>
-
 <script>
+import { mapMutations } from 'vuex';
 
 export default {
     name: "playlist",
-    props:["playlist"]
-} 
+    props:["playlist"],
+    methods:{
+        ...mapMutations(["setPlayIndex"])
+    }
+}
 </script>
-
 <style lang="less" scoped>
 .playlist {
     width: 7.5rem;

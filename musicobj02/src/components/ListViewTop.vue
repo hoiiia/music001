@@ -11,10 +11,10 @@
                 </div>
             </div>
             <div class="right">
-                <svg class="icon search" arica-hidden="true">
+                <svg class="icon search" aria-hidden="true">
                     <use xlink:href="#icon-search"></use>
                 </svg>
-                <svg class="icon" arica-hidden="true">
+                <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-liebiao"></use>
                 </svg>
             </div>
@@ -23,7 +23,7 @@
             <div class="contentLeft">
                 <img :src="playlist.coverImgUrl" alt="">
                 <div class="count">
-                    <svg class="icon" arica-hidden="true">
+                    <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-bofang1"></use>
                     </svg>
                     <span>{{ playlist.playCount }}</span>
@@ -42,25 +42,25 @@
         </div>
         <div class="iconList">
             <div class="iconItem">
-                <svg class="icon" arica-hidden="true">
+                <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-liebiao"></use>
                 </svg>
                 <span>{{ playlist.commentCount }}</span>
             </div>
             <div class="iconItem">
-                <svg class="icon" arica-hidden="true">
+                <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-iconfontzhizuobiaozhun20"></use>
                 </svg>
                 <span>{{ playlist.shareCount }}</span>
             </div>
             <div class="iconItem">
-                <svg class="icon" arica-hidden="true">
+                <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-download"></use>
                 </svg>
                 <span>下载</span>
             </div>
             <div class="iconItem">
-                <svg class="icon" arica-hidden="true">
+                <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-duoxuankuang"></use>
                 </svg>
                 <span>多选</span>
@@ -68,16 +68,12 @@
         </div>
     </div>
 </template>
-
 <script>
-
 export default {
     name: "listviewtop",
-    props:["playlist"],
-    
-} 
+    props:["playlist"]
+}
 </script>
-
 <style lang="less" scoped>
 .listViewTop {
     width: 7.5rem;
